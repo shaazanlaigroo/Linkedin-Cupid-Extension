@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Cupid",
+  "version": "0.2.1",
+  "description": "Compares two LinkedIn profiles viewed by the user for vibe matching.",
+  "icons": {
+    "48": "images/icon48.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "images/icon48.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/in/*", "*://*.linkedin.com/company/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

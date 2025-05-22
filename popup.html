@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Cupid</title>
+    <meta charset="UTF-8"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/icon48.png" alt="LinkedIn Cupid Logo" id="logo">
+            <h1>LinkedIn Cupid</h1>
+        </header>
+
+        <div class="profiles-section">
+            <div class="profile-column" id="profile1-column">
+                <h2>Profile 1</h2>
+                <button id="loadProfile1Button" class="load-button">Load Data from Current Page</button>
+                <div class="profile-data" id="profile1DataDisplay">
+                    <p><strong>Name:</strong> <span id="profile1Name">N/A</span></p>
+                    <p><strong>Headline:</strong> <span id="profile1Headline">N/A</span></p>
+                    <p><strong>Education:</strong> <span id="profile1School" class="detail-field">N/A</span></p>
+                    <p><strong>Company:</strong> <span id="profile1Company" class="detail-field">N/A</span></p>
+                </div>
+            </div>
+
+            <div class="profile-column" id="profile2-column">
+                <h2>Profile 2</h2>
+                <button id="loadProfile2Button" class="load-button">Load Data from Current Page</button>
+                <div class="profile-data" id="profile2DataDisplay">
+                    <p><strong>Name:</strong> <span id="profile2Name">N/A</span></p>
+                    <p><strong>Headline:</strong> <span id="profile2Headline">N/A</span></p>
+                    <p><strong>Education:</strong> <span id="profile2School" class="detail-field">N/A</span></p>
+                    <p><strong>Company:</strong> <span id="profile2Company" class="detail-field">N/A</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions-section">
+            <button id="calculateMatchButton" disabled>Calculate Vibe Match!</button>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <h2>Vibe Match Results</h2>
+            <div class="match-score">
+                <p>Overall Compatibility:</p>
+                <div class="score-circle" id="matchScoreCircle">
+                    <span id="matchPercentage">0%</span>
+                </div>
+            </div>
+            <div id="matchBreakdown">
+                </div>
+        </div>
+    </div>
+
+    <div id="heartModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="heartIconDisplay" class="heart-icon-display">
+                </div>
+            <h2 id="modalTitle">Modal Title</h2>
+            <p id="connectionFact">Connection fact will appear here.</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
